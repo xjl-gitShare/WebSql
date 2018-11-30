@@ -7,7 +7,7 @@
     <title>WebSql</title>
 </head>
 <body>
-    <div id="status"> </div>
+    <div id="status"></div>
     <button onclick="deleteMsg(1)">删除id为1</button>
     <button onclick="updateMsg(1)">更新id为1</button>
 </body>
@@ -45,9 +45,9 @@
 		    tx.executeSql('DELETE FROM LOGS  WHERE id=?',[id]);
 		});
     }
-    function updateMsg(){
+    function updateMsg(id){
     	db.transaction(function (tx) {
-    		tx.executeSql('UPDATE LOGS SET log="360邮箱" WHERE id=?',[1])
+    		tx.executeSql('UPDATE LOGS SET log="361邮箱" WHERE id=?',[1])
     	})
     }
     
